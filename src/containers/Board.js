@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import withDataFetching from '../withDataFetching';
 import Lane from '../components/Lane/Lane';
+import axios from 'axios';
 import {Container, Row, Col} from 'react-bootstrap/';
 
 const BoardWrapper = styled.div`
@@ -37,7 +38,8 @@ class Board extends React.Component {
   };
   onDrop = (e, laneId) => {
     const id = e.dataTransfer.getData('id');
-
+    axios.get(`http://localhost:8000/tickets/update/${id}/${laneId}`)
+    .catch(err=> {console.error(err)})
     const tickets = this.state.tickets.filter(ticket => {
       if (ticket.id === parseInt(id)) {
         ticket.lane = laneId;

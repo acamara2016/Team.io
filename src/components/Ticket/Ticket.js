@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Accordion, Card} from 'react-bootstrap';
+import {Accordion, Card, Badge} from 'react-bootstrap';
 const TicketWrapper = styled.div`
 
   background: darkGray;
@@ -30,7 +30,10 @@ const Ticket = ({ marginRight, onDragStart, ticket }) => (
           {ticket.title}
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
-            <Card.Body>{ticket.body}</Card.Body>
+            <Card.Body>{ticket.body} 
+              <br/>
+              Created by <h2><Badge variant="primary">{ticket.User_idUser}</Badge></h2>
+            </Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>

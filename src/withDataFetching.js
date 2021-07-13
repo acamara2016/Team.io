@@ -13,10 +13,13 @@ export default function withDataFetching(WrappedComponent) {
 
     async componentDidMount() {
       try {
-        const data = await fetch(this.props.dataSource);
+        const data = await fetch("http://localhost:8000/tickets");
+
         const dataJSON = await data.json();
 
         if (dataJSON) {
+          console.log(data)
+          console.log(dataJSON)
           this.setState({
             data: dataJSON,
             loading: false,

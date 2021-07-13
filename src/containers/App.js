@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Board from './Board';
 import Tickets from './Tickets';
+import './App.css';
 import Header from '../components/Header/Header';
 import {Nav, Col} from 'react-bootstrap';
 
