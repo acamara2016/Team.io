@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Accordion, Card, Badge} from 'react-bootstrap';
+import {Accordion, Card, Badge, Modal, Button} from 'react-bootstrap';
 const TicketWrapper = styled.div`
 
-  background: darkGray;
+  background: transparent;
   padding: 10px;
   border-radius: 10px;
 
@@ -17,6 +17,7 @@ const Body = styled.p`
   width: 100%;
 `;
 
+
 const Ticket = ({ marginRight, onDragStart, ticket }) => (
   <TicketWrapper
     draggable
@@ -25,9 +26,9 @@ const Ticket = ({ marginRight, onDragStart, ticket }) => (
   >
     <Body>
       <Accordion defaultActiveKey={ticket.id}>
-        <Card bg='Primary'>
+        <Card style={{backgroundColor:'#fee082'}} bg='Primary'>
           <Accordion.Toggle as={Card.Header} eventKey="0">
-          {ticket.title}
+          #{ticket.id} {ticket.title}
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <Card.Body>{ticket.body} 

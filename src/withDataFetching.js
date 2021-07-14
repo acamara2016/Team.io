@@ -13,7 +13,7 @@ export default function withDataFetching(WrappedComponent) {
 
     async componentDidMount() {
       try {
-        const data = await fetch("http://localhost:8000/tickets");
+        const data = await fetch("https://csci4177-individual-acamara.herokuapp.com/tickets");
 
         const dataJSON = await data.json();
 

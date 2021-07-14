@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import withDataFetching from '../withDataFetching';
 import Lane from '../components/Lane/Lane';
 import axios from 'axios';
+import {Link} from 'react-dom'
 import {Container, Row, Col} from 'react-bootstrap/';
+import Add from '../components/Interface/Add';
+import team from '../team.svg'
+import Team from '../components/Button/Team';
 
 const BoardWrapper = styled.div`
   display: flex;
@@ -61,7 +65,7 @@ class Board extends React.Component {
         <br/>
         <Row md={4}>
         {lanes.map(lane => (
-          <Col>
+          <Col key={lane.id}>
             <Lane
               key={lane.id}
               laneId={lane.id}
@@ -78,6 +82,8 @@ class Board extends React.Component {
           </Col>
 
         ))}
+        <Add/>
+        <Team/>
         </Row>
       </Container>
     );

@@ -1,7 +1,36 @@
 body{
-    background-image: url('./benjamin-child-0sT9YhNgSEs-unsplash.jpeg');
+   background-color:#dbdbdb;
     background-size: cover;
     background-position: center;
+    border:10px solid #9a7058;
     height:100vh;
     background-repeat: no-repeat;
+}
+.board{
+    background: transparent;
+}
+.float1{
+	position:fixed;
+	bottom:40px;
+	right:40px;
+    background: transparent;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.float{
+	position:fixed;
+	bottom:40px;
+	right:40px;
+    background: transparent;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-right:100px;
 }

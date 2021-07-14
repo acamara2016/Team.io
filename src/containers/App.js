@@ -33,15 +33,16 @@ class App extends Component {
 
     return (
       <>
+      <div className="app">
         <GlobalStyle />
         <AppWrapper>
-          <Header />
+          {/* <Header /> */}
           <Board
             lanes={lanes}
             dataSource={'../../assets/data.json'}
           />
-        
         </AppWrapper>
+        </div>
       </>
     );
   }

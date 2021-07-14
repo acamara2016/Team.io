@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import Ticket from '../Ticket/Ticket';
 
 const LaneWrapper = styled.div`
+
   list-style: none;
-  text-align: left;
+  text-align: center;
   padding: 0;
-  background: lightGray;
+  background: transparent;
   border-radius: 20px;
   min-height: 50vh;
   width: 20vw;
